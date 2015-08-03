@@ -1,1 +1,1 @@
-web: python 03-data-bandits/app.py
+web: python app.py
