@@ -1,40 +1,40 @@
-<html>    
+<html>
     <head>
-        <title>MVP</title>
-        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+         <title>MVP</title>
+	 <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
         <div id="container">
             <div id="content">
-               <h2>My CPI</h2>
-		<form method="post" action="{{ url_for('hello') }}">
+                <h2>My CPI</h2>
+                <form method="post" action="{{ url_for('hello') }}">
                   <div id="form1">
-                    <p>Please enter the amount you spend in each category:</p>
+                    <label for="instructions">Please enter the amount you spend in each category:</label>
                     </br>
                     <table id="categoriestable">
                       <tr>
                         <td><label for="food">Food/Beverage:</label></td>
-                        <td><input type="text" name="food" /></td> 
+                        <td><input type="text" name="food" value="{{food}}" /></td> 
                         <td><label for="medical">Medical Care:</label></td>
-                        <td><input type="text" name="medical" /></td>
+                        <td><input type="text" name="medical" value="{{medical}}" /></td>
                       </tr>
                       <tr>
                         <td><label for="housing">Housing:</label></td>
-                        <td><input type="text" name="housing" /></td> 
+                        <td><input type="text" name="housing" value="{{housing}}" /></td> 
                         <td><label for="recreation">Recreation:</label></td>
-                        <td><input type="text" name="recreation" /></td>
+                        <td><input type="text" name="recreation" value="{{recreation}}" /></td>
                       </tr>
                       <tr>
                         <td><label for="apparel">Apparel:</label></td>
-                        <td><input type="text" name="apparel" /></td> 
+                        <td><input type="text" name="apparel" value="{{apparel}}" /></td> 
                         <td><label for="education">Edcuation & Communication:</label></td>
-                        <td><input type="text" name="education" /></td>
+                        <td><input type="text" name="education" value="{{education}}" /></td>
                       </tr>
                       <tr>
                         <td><label for="transport">Transportation:</label></td>
-                        <td><input type="text" name="transport" /></td> 
+                        <td><input type="text" name="transport" value="{{transport}}" /></td> 
                         <td><label for="other">Other Services:</label></td>
-                        <td><input type="text" name="other" /></td>
+                        <td><input type="text" name="other" value="{{other}}" /></td>
                       </tr>
                       <tr>
                         <td></td>
@@ -44,22 +44,23 @@
                       </tr>
                     </table>
                   </div>
+                  </br>
+                  </br>
+                  </br>
+                  <div id="form2">
+                    <table id="cpitable">
+                      <tr>
+                        <td><label for="mycpi">Your Personal CPI:</label></td>
+                        <td><input type="text" name="mycpi" disabled value="{{mycpi}}"/></td>
+                        <td><label for="avgcpi">Average CPI:</label></td>
+                        <td><input type="text" name="avgcpi" disabled value="236.265"/></td>
+                      </tr>
+                    </table>
+                  </div>
                 </form>
-                </br>
-                </br>
-                </br>
-                <div id="form2">
-               	 <table id="cpitable">
-                    <tr>
-                      <td><label for="mycpi">Your Personal CPI:</label></td>
-                      <td><input type="text" name="mycpi" disabled /></td>
-                      <td><label for="avgcpi">Average CPI:</label></td>
-                      <td><input type="text" name="avgcpi" disabled /></td>
-                    </tr>
-                  </table>
-                </div>
+              </div>
             </div>
         </div>
     </body>
 </html>
-  
+

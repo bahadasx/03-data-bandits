@@ -16,7 +16,10 @@ a {
     font-weight: normal;
 }
 
-h2{
+input {
+    font-size: 14px;
+}
+h2 {
     text-align: center;
     font-size: 30px;
     font-weight: bold;
@@ -29,23 +32,24 @@ h2{
     height: 50px;
 }
 
-#form1{
+#form1 {
     border-radius: 25px;
     border: 2px solid #000000;
     padding: 20px;
 }
 
-#form2{
+#form2 {
     border-radius: 25px;
     border: 2px solid #000000;
     padding: 20px;
 }
 
-#categoriestable{
+#categoriestable {
     width:100%;
 }
 
-#cpitable{
+#cpitable {
+    table-layout: fixed;
     width:100%;
 }
 
