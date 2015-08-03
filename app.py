@@ -23,8 +23,8 @@ def hello():
     apparel=apparel, education=education, transport=transport, other=other, mycpi=mycpivalue)
 
 def mycpi(values):
-    return sum(int(i) for i in values) / 8
-
+    #return sum(int(i) for i in values) / 8
+    return sum(float(i) for i in values) / 8
 if __name__ == '__main__':
   app.run()
 
