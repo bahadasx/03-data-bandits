@@ -24,9 +24,6 @@ def hello():
     return render_template('form_submit.html', food=food, medical=medical, housing=housing, recreation=recreation,
     apparel=apparel, education=education, transport=transport, other=other, mycpi=mycpivalue)
 
-def mycpi(values):
-    return sum(int(i) for i in values) / 8
-
 def compute_cpi(values):
     component_indexes = {'food':246.245,\
     'apparel': 124.954,\
@@ -50,5 +47,5 @@ def compute_cpi(values):
     return inflation
 
 if __name__ == '__main__':
-  app.run()
-
+  port = int(os.environ.get('PORT',5000))
+  app.run(host='0.0.0.0', port=port)
