@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, url_for
+import os
 
 app = Flask(__name__)
 
@@ -17,8 +18,7 @@ def hello():
     education=request.form['education']
     transport=request.form['transport']
     other=request.form['other']
-    arr = [food,medical,housing,recreation,apparel,education,transport,other]
-    #mycpivalue=mycpi(arr)
+    arr = [food,housing,apparel,education,transport,medical,recreation,other]
     floatarr = [float(i) for i in arr]
     mycpivalue=compute_cpi(floatarr)
     return render_template('form_submit.html', food=food, medical=medical, housing=housing, recreation=recreation,
