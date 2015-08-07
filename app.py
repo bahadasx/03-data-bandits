@@ -34,16 +34,30 @@ def compute_cpi(values):
     'recreation': 116.395,\
     'other': 415.022
     }
-    wgted_sum = (values[0] * component_indexes['food']/100 + \
-        values[1] * component_indexes['housing']/100 + \
-        values[2] * component_indexes['apparel']/100 + \
-        values[3] * component_indexes['edu']/100 + \
-        values[4] * component_indexes['transport']/100 + \
-        values[5] * component_indexes['medical_care']/100 + \
-        values[6] * component_indexes['recreation']/100 + \
-        values[7] * component_indexes['other']/100)
+    budget_sum = sum(values)
+    budget_share=values[0] / budget_sum
+    print budget_share
+     
+    wgted_sum = (values[0]/budget_sum * component_indexes['food']/100 + \
+        values[1]/budget_sum * component_indexes['housing']/100 + \
+        values[2]/budget_sum * component_indexes['apparel']/100 + \
+        values[3]/budget_sum * component_indexes['edu']/100 + \
+        values[4]/budget_sum * component_indexes['transport']/100 + \
+        values[5]/budget_sum * component_indexes['medical_care']/100 + \
+        values[6]/budget_sum * component_indexes['recreation']/100 + \
+        values[7]/budget_sum * component_indexes['other']/100)
     inflation = wgted_sum - 1
     inflation *= 100
+    #wgted_sum = (values[0] * component_indexes['food']/100 + \
+    #    values[1] * component_indexes['housing']/100 + \
+    #    values[2] * component_indexes['apparel']/100 + \
+    #    values[3] * component_indexes['edu']/100 + \
+    #    values[4] * component_indexes['transport']/100 + \
+    #    values[5] * component_indexes['medical_care']/100 + \
+    #    values[6] * component_indexes['recreation']/100 + \
+    #    values[7] * component_indexes['other']/100)
+    #inflation = wgted_sum - 1
+    #inflation *= 100
     return inflation
 
 if __name__ == '__main__':
