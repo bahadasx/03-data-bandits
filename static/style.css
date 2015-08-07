@@ -32,6 +32,11 @@ h2 {
     height: 50px;
 }
 
+.currencyinput {
+    border: 0px;
+    font-size: 14px:
+}
+
 #form1 {
     border-radius: 25px;
     border: 2px solid #000000;
